@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.convert-page {
+  min-height: 90.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #121212, #1a1a2e);
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.floating-cube {
+  position: absolute;
+  background: rgba(33, 150, 243, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.cube-1 {
+  top: 25%;
+  left: 15%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 0s;
+}
+
+.cube-2 {
+  bottom: 12%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 1.5s;
+}
+
+.convert-container {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+h1 {
+  background: linear-gradient(to right, #64b5f6, #2196f3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+.upload-area {
+  margin-bottom: 25px;
+  padding: 50px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.file-label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+}
+
+.clear-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.clear-button:hover {
+  background: rgba(255, 68, 68, 0.2);
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.action-button {
+  flex: 1;
+  background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+}
+
+.action-button:disabled {
+  background: #566573;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.download-section {
+  margin-top: 10px;
+}
+
+.download-link {
+  text-decoration: none;
+}
+
+.download-button {
+  width: 100%;
+  background: linear-gradient(90deg, #11998e, #38ef7d);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(56, 239, 125, 0.3);
+}
+
+@media (max-width: 480px) {
+  .convert-container {
+    padding: 20px 15px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.upload-page {
+  min-height: 90.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #121212, #1a1a2e);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-container {
+  width: 100%;
+  max-width: 550px;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 10;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.upload-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #64b5f6, #2196f3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.upload-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+}
+
+.drop-zone {
+  min-height: 200px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.drop-zone.active {
+  border-color: #2196f3;
+  background: rgba(33, 150, 243, 0.1);
+}
+
+.drop-zone.has-file {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.drop-zone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.upload-icon {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+
+.drop-zone-text {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.drop-zone-text p {
+  margin: 5px 0;
+}
+
+.drop-zone-text .small {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.file-input {
+  margin: 15px 0;
+  position: relative;
+}
+
+.file-input input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 10px 25px;
+  background: linear-gradient(45deg, #2196f3, #0d47a1);
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.file-label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.file-selected {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.clear-file {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.7rem;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.clear-file:hover {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.button-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.upload-btn {
+  background: linear-gradient(45deg, #2196f3, #0d47a1);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.upload-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 123, 255, 0.6);
+}
+
+.upload-btn:disabled {
+  background: linear-gradient(45deg, #a0a0a0, #5a5a5a);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.back-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+/* Decorative elements */
+.floating-cube {
+  position: absolute;
+  background: rgba(33, 150, 243, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.cube-1 {
+  top: 20%;
+  left: 15%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 0s;
+}
+
+.cube-2 {
+  bottom: 15%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .upload-container {
+    padding: 30px 20px;
+  }
+  
+  .upload-title {
+    font-size: 2rem;
+  }
+  
+  .drop-zone {
+    min-height: 180px;
+  }
+  
+  .button-container {
+    flex-direction: column;
+  }
+  
+  .floating-cube {
+    display: none;
+  }
+}
+
