@@ -2,9 +2,7 @@
 
 ## Overview
 
-The **3D CAD Viewer** is a web-based application that enables users to **upload, view, and manipulate 3D models** in formats like **STL** and **OBJ**.  
-It provides an interactive interface with features such as ***rotation, zoom, and pan controls*** for enhanced model visualization. 
-Additionally, users can convert their model from ***.STL to .OBJ*** and can download the converted file.
+The **3D CAD Viewer** is a web-based application that enables users to **upload, view, and manipulate 3D models** in formats like **STL** and **OBJ**. It provides an interactive interface with features such as ***rotation, zoom, and pan controls*** for enhanced model visualization. Additionally, users can convert their model from ***.STL to .OBJ*** and can download the converted file.
 
 
 ## Technologies Used
@@ -23,11 +21,12 @@ Additionally, users can convert their model from ***.STL to .OBJ*** and can down
 - **Viewer Page** : The model opens in a seperate page after uploading.
 - **File Exporting** : Converts model from **.STL to .OBJ** and we can download the converted file.
 
-
- ## Installations <br/>
+ ## How to Run <br/>
+ 
+ ### Installations <br/>
 
    <h4>1. Clone the repository:</h4>
-   <pre><code> git clone https://github.com/chaitanyakagita/3D-CAD-Viewer.git </code></pre>
+   <pre><code> git clone https://github.com/chaitanyakagita/3D_CAD_VIEWER.git </code></pre>
 
    <h4>2. Navigate to the main project directory:</h4>
    <pre><code> cd 3d_cad_viewer </code></pre>
@@ -50,3 +49,16 @@ Additionally, users can convert their model from ***.STL to .OBJ*** and can down
    <pre><code> http://localhost:3000 </code></pre>
    
 
+## Output Images <br/>
+
+### Home Page
+![Image](https://github.com/user-attachments/assets/499c4b91-09c0-4012-ab6b-9017c62cb34b)
+
+### Upload Page
+![Image](https://github.com/user-attachments/assets/9733b087-5956-4b54-9bb8-6fab3272a480)
+
+### Viewer Page (3D Model View)
+![Image](https://github.com/user-attachments/assets/92806f7f-79a9-46c5-8f3e-37d0dee1720c)
+
+### Convert Page
+![Image](https://github.com/user-attachments/assets/e172e943-cfc5-47a7-a3a3-23ed05617980)
